@@ -1,7 +1,7 @@
 import streamlit as st
 import User
 def storeData(name, number, email, org):
-    user = new User(name, number, email, org)
+    user = User(name, number, email, org)
 
 titleCol, formCol = st.columns([0.3, 0.7])
 
@@ -19,7 +19,7 @@ with formCol:
         email = st.text_input(label="Email", placeholder="AndrewTate@HustlersUniversity.edu")
         org = st.text_input(label="Fraternity/Sorority", placeholder="N/A")
         
-        submitBtn = st.form_submit_button(label="Sign Up", on_click=storeData(), disabled=False, use_container_width=True)
+        submitBtn = st.form_submit_button(label="Sign Up", on_click=storeData() disabled=False, use_container_width=True) #TODO: SETUP STORE DATA FUNCTION TO CREATE AND STORE USER OBJECT
 
 
 
